@@ -1,0 +1,137 @@
+<div class="contact">
+    <div class="d-flex row">
+        <div class="d-flex flex-column p-2 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 col-xxl-5">
+            <div class=" col-12 pb-3">
+                <div class="p-2 mb-1 d-flex align-items-center">
+                    <span class="dot"></span>
+                    <span class="heading ">contact</span>
+                </div>
+                <div>
+                    <p class="fs-1 fw-semibold my-0">Let's Build</p>
+                    <p class="fs-1 fw-semibold my-0">Somthing <span class="nameGradient">Meaningful</span></p>
+                </div>
+                <div class="details">
+                    <span>Weather you have a project in mind, a research opportunity, or just want to connect, I'd love
+                        to hear from you.</span>
+                </div>
+            </div>
+            <div class="contactInfo panelBackground">
+                <div class="d-flex flex-column px-4 py-2">
+                    @for(item of contactDetails(); track $index){
+                    <div class="pt-2 pb-3 d-flex">
+                        <div class=" d-flex col-3 col-sm-3 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                            <div class="contactLogo">
+                                <img src="{{item.logo}}" alt="">
+                            </div>
+                        </div>
+                        <div
+                            class="px-lg-0 px-md-0 d-flex flex-column col-7 col-sm-8 col-md-9 col-lg-9 col-xl-10 col-xxl-10">
+                            <p class="my-0 contactName">{{item.name}}</p>
+                            <p class="my-0 contactDetails">{{item.details}}</p>
+                        </div>
+                        <div class=" d-flex align-items-center col-2 col-sm-2 col-md-2 col-lg-2 col-xl-1 col-xxl-1">
+                            @if(item.isitemail){
+                            <a href="{{item.link}}" target="_blank"><mat-icon>call_made</mat-icon></a>
+                            }
+                            @else {
+                            <a href="{{item.link}}"><mat-icon>call_made</mat-icon></a>
+                            }
+                        </div>
+                    </div>
+                    }
+                </div>
+                <hr>
+                <div class="contactApps d-flex flex-column">
+                    <p class="my-2 mx-3">Connect with me</p>
+                    <div class="d-flex row px-4 py-2">
+                        @for(item of connectApp();track $index){
+                        <div
+                            class="appLink d-flex flex-column align-items-center col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                            <div class="Applogo mb-2">
+                                <a href="{{item.link}}" target="_blank"><img src="{{item.logo}}"></a>
+                            </div>
+                            <div class="appName">
+                                <a href="{{item.link}}" target="_blank"><span>{{item.name}}</span></a>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-end p-2 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-7 col-xxl-7">
+            <!-- <div class="spacer"></div> -->
+            <div class="panelBackground ">
+                <div class="contactFormTop m-3">
+                    <div class="sendMessageIcon col-2">
+                        <img src="../../../assets/send.png" alt="">
+                    </div>
+                    <div class="col-8 ">
+                        <p class="fs-5 mb-0">Send a Message</p>
+                    </div>
+                </div>
+                <form class="p-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <mat-form-field>
+                                <mat-label>First Name</mat-label>
+                                <input matInput type="text">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <mat-form-field>
+                                <mat-label>Last Name</mat-label>
+                                <input matInput type="text">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Subject</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="messageBox">
+                        <mat-form-field>
+                            <mat-label>Your Message</mat-label>
+                            <input matInput type="text">
+                        </mat-form-field>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-end">
+                        <div class="rocket-trail-decor">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" class="rocket-trail-img">
+                                <defs>
+                                    <!-- Gradient for the Dashed Trail -->
+                                    <linearGradient id="trailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#0f172a" stop-opacity="0.1" />
+                                        <stop offset="20%" stop-color="#1d4ed8" stop-opacity="0.5" />
+                                        <stop offset="60%" stop-color="#0284c7" stop-opacity="0.9" />
+                                        <stop offset="100%" stop-color="#38bdf8" stop-opacity="1" />
+                                    </linearGradient>
+
+                                    <!-- Gradient for Rocket Body -->
+                                    <linearGradient id="rocketGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#2563eb" />
+                                        <stop offset="50%" stop-color="#3b82f6" />
+                                        <stop offset="100%" stop-color="#38bdf8" />
+                                    </linearGradient>
+                                </defs>
+
+                                <!-- S-Wave Dashed Flight Path -->
+                                <path d="M 30 160 C 160 225, 300 135, 430 175 C 560 205, 730 290, 820 195"
+                                    stroke="url(#trailGrad)" stroke-width="4.5" stroke-dasharray="9 11"
+                                    stroke-linecap="round" fill="none" />
+                            </svg>
+                            <img src="../../../assets/send_rocket.png" alt="">
+                        </div>
+                        <div class="">
+                            <button mat-fab extended class="flowing-bg">SEND MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

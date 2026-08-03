@@ -1,0 +1,243 @@
+:host .research {
+    /* height: 100dvh; */
+    /* width: 100% !important; */
+    padding: 1in 1in 0.5in 1in;
+    /* background-color: #070a11; */
+    color: #ffffff;
+}
+
+.Gradient {
+    background: linear-gradient(90deg,
+            #5D86F7 0%,
+            #58B4F8 55%,
+            #4ED8F7 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: larger;
+}
+
+.dot {
+    background-color: #5389e6;
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+}
+
+.panelBackground {
+    border: 1px solid #425171;
+    background-color: rgb(13, 19, 32, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    height: 100%;
+}
+
+.heading {
+    margin: 0px 12px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+/* .overView {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+} */
+
+/* .overViewPanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 25%;
+    gap: 15px;
+    color: #C8D4F0;
+} */
+
+.overViewLogo img {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 0 6px rgba(0, 180, 216, 0.5));
+}
+
+.titleColor {
+    font-size: 28px;
+    color: #8CA4D6
+}
+
+/* .mainDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 64dvh;
+} */
+
+/* .experiencePanel {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 30%;
+} */
+/* 
+.researchPanel {
+    width: 26%;
+
+}
+
+.publicationPanel {
+    width: 42%;
+} */
+
+.titleLogo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #11265c 0%, #0a1333 70%, #050a1e 100%);
+    border: 1px solid rgba(0, 102, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.titleLogo img {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(0 0 6px rgba(0, 180, 216, 0.3));
+
+}
+
+
+.paperPanel {
+    background-color: rgb(15, 21, 34, 0.6);
+    border: 1px solid rgb(63, 74, 98);
+    border-radius: 12px;
+}
+
+.researchImg img {
+    border-radius: 14px;
+    padding: 5px;
+    width: 130px;
+    /* height: 93px; */
+}
+
+.journal span {
+    margin: 0;
+    padding: 2px 10px;
+    font-size: small;
+    width: fit-content;
+    border-radius: 20px;
+    background: rgba(90, 120, 255, .18);
+    color: #79B6FF;
+}
+.journal:hover span{
+    color: #9cc7fb;
+}
+
+.title p {
+    font-size: 14px;
+    margin: 1px 0px;
+    color: #C8D4F0;
+}
+.title:hover p{
+    color: #fff;
+}
+
+.year p {
+    font-size: small;
+    margin: 1px 0px;
+    color: #ffffff91;
+}
+
+/* .researchImg {
+    width: 26%;
+} */
+
+.mat-mdc-icon-button {
+    color: #ffffffa8;
+}
+.mat-mdc-icon-button:hover {
+    color: #ffff;
+}
+
+.toolsLogo img {
+    width: 40px;
+    height: 40px;
+}
+
+li {
+    color: #C8D4F0;
+
+}
+
+.toolTextColor {
+    color: #5bb0ff;
+}
+
+.experienceDot {
+    position: absolute;
+    left: 2px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #6A5CFF;
+    box-shadow:
+        0 0 18px #6A5CFF;
+}
+
+.line {
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            #7F5BFF,
+            transparent);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 35px;
+    margin-top: 30px;
+    margin: 0;
+}
+
+.content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.content span {
+    margin: 0;
+    font-size: 15px;
+}
+
+.role {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: rgba(90, 120, 255, .18);
+    color: #79B6FF;
+}
+
+.content p {
+    margin-top: 6px;
+    /* line-height:1.7; */
+    color: #C8D4F0;
+}
+.mainContent{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: auto; */
+}

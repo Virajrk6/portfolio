@@ -1,0 +1,257 @@
+<div class="about">
+    <div class="p-2 mb-4 d-flex align-items-center">
+        <span class="dot"></span>
+        <span class="heading">About me</span>
+    </div>
+
+    <div class="d-flex h-100 row justify-content-around">
+        <!-- <div class="row d-flex p-2"> -->
+            <div class="p-2 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="timeline p-3 h-100">
+                @for (item of timelineItems(); track item.title) {
+                <div class=" timeline-item">
+                    <div class="badge-wrapper">
+                        <div class="icon-badge">
+                            @if (item.isAngularLogo) {
+                            <img src="{{item.src}}" class="logo">
+                            } @else {
+                            <mat-icon>{{ item.icon }}</mat-icon>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3><button [class.is-clicked]="clickedButton() == item.title" class="title-button"
+                                [matTooltipPosition]="'above'" matTooltip="Click to See More"
+                                (click)="openBox(item.title)">{{ item.title }}</button></h3>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </div>
+                }
+            </div>
+            </div>
+
+            <div class="p-2 col-xxl-5 col-xl-5 col-lg-6 col-md-12 col-sm-12">
+            <div [class.is-idle]="panelState() === 'idle'" [class.is-hidden]="panelState() === 'closed'"
+                class="extraInfo p-3 h-100">
+                @if(isToggleClicked()){
+                @switch (clickedButton())
+                {
+                @case ('Physics Student') {
+                <div class="text-justify mb-3 mt-1">
+                    <span class="lightColor">
+                        My journey began with a deep curiosity about the universe.
+                        Through my Bachelor's and Master's, I developed a strong foundation
+                        in mathematics, analytical thinking, and scientific problem
+                        solving that continues to influence my approach to software
+                        development.
+                    </span>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="education row my-4">
+                    <div class="col">
+                        <span class="fs-5">Master of Science</span>
+                        <br>
+                        <span class="lightColor">Physics - Astrophysics and Cosmology</span>
+                        <br>
+                        <span class="lightColor">Charotar University of Science and Technology</span>
+                        <!-- <p>First class with Distinction - 8.30/10.00</p> -->
+                    </div>
+                    <div class="yearWidth">
+                        <span>Aug 2021 -</span>
+                        <!-- <br> -->
+                        <span> Apr 2023</span>
+                    </div>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="row mt-4">
+                    <div class="col">
+                        <span class="fs-5">Bachelor of Science</span>
+                        <br>
+                        <span class="lightColor">Physics</span>
+                        <br>
+                        <span class="lightColor">Veer Narmad South Gujarat University</span>
+                        <!-- <p>First class with Distinction - 7.14/10.00</p> -->
+                    </div>
+                    <div class="yearWidth">
+                        <span>Jun 2017 -</span>
+                        <!-- <br> -->
+                        <span> Sep 2020</span>
+                    </div>
+                </div>
+                }
+                @case ('Astrophysics Research') {
+                <div class="text-justify mb-3 mt-1">
+                    <span class="lightColor">
+                        My research journey took me into the world of compact objects,
+                        pulsars, and relativistic astrophysics. Working as a research
+                        intern allowed me to collaborate with scientists, develop computational
+                        models, and solve complex problems using mathematics and scientific programming.
+                    </span>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="education row my-4">
+                    <div class="col">
+                        <span class="fs-5">Long-term Research Intern</span>
+                        <br>
+                        <span class="lightColor">International Centre for Space and Cosmology</span>
+                    </div>
+                    <div class="yearWidth">
+                        <span>Jun 2023 -</span>
+                        <!-- <br> -->
+                        <span>Oct 2024</span>
+                    </div>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="row mt-4 mx-2 ">
+                    <p class="fs-5">Research Areas</p>
+                    <ul>
+                        <li class="lightColor">Computational: Pulsar timing and gravitational waves, numerical
+                            relativity,
+                            accretion and jet
+                            formation.</li>
+                        <li class="lightColor">Theoretical: Extreme gravity regions, relativistic compact objects,
+                            high-energy astrophysics.
+                        </li>
+                        <!-- <li>Observational: Time-domain astrophysics, pulsar timing arrays, radio observations, fast radio bursts, radio transients, compact binaries, gravitational waves.</li> -->
+                        <!-- <li>Numerical Analysis</li> -->
+                    </ul>
+                </div>
+                }
+                @case ('Published Research') {
+                <div class="text-justify mb-3 mt-1">
+                    <span class="lightColor">
+                        Contributing to peer-reviewed publications allowed me to transform
+                        research into scientific contributions. My work focused on relativistic
+                        astrophysics, pulsar timing, and cosmological models, collaborating with
+                        researchers across the world and presenting findings through internationally recognized journals
+                        and
+                        conferences.
+                    </span>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="col my-4">
+                    <div class="row">
+                        <div class="col">
+                            <span>Time delay of pulsar signals in astrophysical black hole spacetimes</span>
+                            <br>
+                            <span class="lightColor">Physics of the Dark Universe</span>
+                        </div>
+                        <div class="yearWidth">
+                            <span>Jun 2025</span>
+                        </div>
+                    </div>
+                    <hr style="margin: auto ;width: 50%; " class="my-2">
+                    <div class="row">
+                        <div class="col">
+                            <span>Relativistic time delay analysis of pulsar signals near ultracompact objects</span>
+                            <br>
+                            <span class="lightColor">Physical Review D</span>
+                        </div>
+                        <div class="yearWidth">
+                            <span>May 2024</span>
+                        </div>
+                    </div>
+                    <hr style="margin: auto ;width: 50%;" class="my-2">
+                    <div class="row">
+                        <div class="col">
+                            <span>Cosmo-dynamics of dark energy models resulting from a parametrization of H in f(Q, T)
+                                gravity</span>
+                            <br>
+                            <span class="lightColor">European Physical Journal Plus</span>
+                        </div>
+                        <div class="yearWidth">
+                            <span>Apr 2023</span>
+                        </div>
+                    </div>
+                </div>
+                }
+                @case ('Frontend Development') {
+                <div class="education row mb-3 mt-1">
+                    <div class="col">
+                        <span class="fs-5">Frontend Developer Trainee</span>
+                        <br>
+                        <span class="lightColor">HTML • CSS • JavaScript</span>
+                        <br>
+                        <span class="lightColor">TypeScript • Responsive Design • Git</span>
+                        <br>
+                        <span class="lightColor">Personal Projects & APIs</span>
+                    </div>
+                    <div class="yearWidth">
+                        <span>Mar 2026 -</span>
+                        <!-- <br> -->
+                        <span>May 2026</span>
+                    </div>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="row">
+                    <div class="mt-2">
+                        <p>Getting my hands on the fundamentals.</p>
+                        <ul>
+                            <li class="lightColor">
+                                Started learning HTML, CSS, and JavaScript while exploring
+                                how modern websites are built. Focused on understanding the
+                                core concepts behind the web rather than just following tutorials.
+                            </li>
+                        </ul>
+                    </div>
+                    <hr style="margin: auto ;width: 50%;">
+                    <div class="mt-2">
+                        <p>Learning to think like a developer.</p>
+                        <ul>
+                            <li class="lightColor">
+                                Expanded into TypeScript, responsive design,
+                                and Git while building small projects to strengthen
+                                problem-solving skills and writing cleaner, maintainable code.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                }
+                @case ('Angular Developer') {
+                <div class="education row mb-3 mt-1">
+                    <div class="col">
+                        <span class="fs-5">Angular Developer</span>
+                        <br>
+                        <span class="lightColor">Angular 21 • Signals • Modern Architecture</span>
+                        <br>
+                        <span class="lightColor">Material • RxJS • Routing</span>
+                    </div>
+                    <div class="yearWidth">
+                        <span>June 2026 -</span>
+                        <!-- <br> -->
+                        <span>Present</span>
+                    </div>
+                </div>
+                <hr style="margin: auto ;width: 50%;">
+                <div class="row">
+                    <div class="mt-2">
+                        <p>Exploring the Angular ecosystem.</p>
+                        <ul>
+                            <li class="lightColor">
+                                Worked with Angular Material, RxJS, routing, forms,
+                                HTTP services, lazy loading, and standalone components
+                                while building increasingly complex applications.
+                            </li>
+                        </ul>
+                    </div>
+                    <hr style="margin: auto ;width: 50%;">
+                    <div class="mt-2">
+                        <p>Building with confidence.</p>
+                        <ul>
+                            <li class="lightColor">
+                                Developing modern Angular 21 applications using Signals,
+                                standalone APIs, reusable components, and performance-focused design.
+                                Continuously learning best practices and refining my engineering approach.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                }
+                }
+                }
+            </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>

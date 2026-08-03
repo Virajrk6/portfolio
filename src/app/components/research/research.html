@@ -1,0 +1,161 @@
+<div class="research">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 d-flex align-items-center">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="p-2 mb-4 d-flex align-items-center">
+                    <span class="dot"></span>
+                    <span class="heading">Research</span>
+                </div>
+                <div>
+                    <p class="Gradient">From theoretical models to published scientific contributions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center p-2 col-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+            <div class="panelBackground p-0  py-4  m-0 row">
+                @for(item of overView(); track $index){
+                <div class=" d-flex flex-row align-items-center py-2 px-2 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                    <div class="overViewLogo col-3 align-items-center m-2">
+                        <img src="{{item.logo}}" alt="">
+                    </div>
+                    <div class="col-7 align-items-center mt-2">
+                        <div class="row mb-0">
+                            <p class="fs-4 mb-0">{{item.number}}</p>
+                            <span class="">{{item.title}}</span>
+                            <span class="text-secondary">{{item.subtitle}}</span>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="mainContent row mt-2">
+        <div class="p-2  col-12 col-sm-12 col-md-11 col-lg-10 col-xl-4 col-xxl-4">
+            <div class="panelBackground p-2">
+                <div class="d-flex row mx-3 mt-2">
+                    <div class="col-2 titleLogo">
+                        <img src="../../../assets/observatory.png" alt="">
+                    </div>
+                    <div class=" px-2 col-9 d-flex align-items-center">
+                        <span class="fs-5 titleColor">Research Experience</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="timeline">
+                        <div class="line"></div>
+                        <div class="experienceDot"></div>
+                        <div class="content">
+                            <div class="my-3">
+                                <span>2023 - 2026
+                                    <span class="role">
+                                        ICSC, Ahmedabad University
+                                    </span>
+                                </span>
+                                <br>
+                                <span>Strong Gravity & Pulsar Signal Propagation</span>
+                                <p>Relativistic time delay models around black holes. [Galactic Center] [TEMPO2]
+                                    [Mathematica/Python]</p>
+
+                            </div>
+                            <div class="mb-3">
+                                <span> July 2025
+                                    <span class="role">
+                                        ICTS-TIFR
+                                    </span>
+                                </span>
+                                <br>
+                                <span> Gravitational-wave astronomy summer school</span>
+                                <p>Nanohertz GW searches and SMBH binary detection. [Nanohertz GWs] [IPTA/MeerKAT] [TOA
+                                    Analysis]</p>
+                            </div>
+                            <div>
+                                <span> Feb 2023
+                                    <span class="role">
+                                        CCSP, SGT University
+                                    </span>
+                                </span>
+                                <br>
+                                <span>Theoretical Cosmology & Dark Energy</span>
+                                <p>Cosmography and energy conditions in modified Gravity [Cosmography] [Dark Energy]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 col-12 col-sm-12 col-md-11 col-lg-10 col-xl-5 col-xxl-5">
+            <div class="panelBackground p-2">
+                <div class="row mx-3 mt-2">
+                    <div class="col-2 titleLogo">
+                        <img src="../../../assets/book_fill.png" alt="">
+                    </div>
+                    <div class=" px-3 col-9 d-flex align-items-center">
+                        <span class="fs-5 titleColor">Publications</span>
+                    </div>
+                </div>
+                <div class="py-3 col-12 d-flex flex-column">
+                    @for(item of researchDetails(); track $index){
+                    <div class="paperPanel d-flex flex-row p-2 my-2">
+                        <div class="researchImg d-flex align-items-center col-sm-4 col-md-3 col-lg-3 col-xl-3">
+                            <img src="{{item.img}}" alt="">
+                        </div>
+                        <div class="d-flex px-2 p-0 flex-column col-sm-6 col-md-8 col-lg-8 col-xl-8">
+                            <div class="journal">
+                                <a href="{{item.journalLink}}" target="_blank" class="text-decoration-none"><span>{{item.journal}}</span></a>
+                            </div>
+                            <div class="title">
+                                <a href="{{item.doi}}" target="_blank" class="text-decoration-none"><p> {{item.title}}</p></a>
+                            </div>
+                            <div class="year">
+                                <p>{{item.year}}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-around col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                            <a href="{{item.doi}}" matIconButton target="_blank"> <mat-icon>open_in_new</mat-icon></a>
+                            <a href="{{item.pdf}}" matIconButton target="_blank"><mat-icon>download</mat-icon></a>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="p-2 col-12 col-sm-12 col-md-11 col-lg-10 col-xl-3 col-xxl-3">
+            <div class="panelBackground p-2">
+                <div class="row mx-3 mt-2">
+                    <div class="col-2 titleLogo">
+                        <img src="../../../assets/universe (1).png" alt="">
+                    </div>
+                    <div class=" px-2 col-9 d-flex align-items-center">
+                        <span class="fs-5 titleColor">Research Areas</span>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <ul>
+                        @for(item of researchAreas(); track $index){
+                        <li class="mt-1 mx-2 ">
+                            {{item}}
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <hr style="margin: auto ;width: 50%;" class="my-2">
+                <div>
+                    <p class=" mx-3 toolTextColor"> Tools & Methods</p>
+                    <div class="row mx-2">
+                        @for(item of tools(); track $index){
+                        <div class="p-xl-4 d-flex justify-content-center col-lg-3 col-xl-3 col-md-3 col-sm-3 col-6">
+                            <div class="toolsLogo d-flex flex-column align-items-center">
+                                <img src="{{item.logo}}" alt="">
+                            
+                                <p class="text-center">{{item.name}}</p>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

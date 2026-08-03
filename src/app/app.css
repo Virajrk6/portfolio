@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.router-shell {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.router-shell > * {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+}
+
+.router-shell.router-down > * {
+  animation: routeEnterDown 680ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.router-shell.router-up > * {
+  animation: routeEnterUp 680ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes routeEnterDown {
+  from {
+    opacity: 0;
+    transform: translateY(18%) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes routeEnterUp {
+  from {
+    opacity: 0;
+    transform: translateY(-18%) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

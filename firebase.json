@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "portfolio-virajrk",
+    "public": "dist/demo/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "dist/demo/browser/index.html"
+      }
+    ]
+  }
+}

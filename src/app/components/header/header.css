@@ -1,0 +1,37 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid rgba(221, 219, 210, 0.201);
+}
+.logo{
+    width: 50px;
+}
+.spacer1{
+    max-width: 25%;
+    min-width: 5%;
+}
+.spacer2{
+    max-width: 10%;
+    min-width: 5%;
+}
+.navigationButton{
+    color: rgb(114, 147, 213);
+    font-weight: 500;
+}
+a{
+    color:azure;
+    font-weight: 500;
+    
+}
+a:hover{
+    color: #ad6dee;
+    font-size: large;
+    transition: all 0.1s ease-in-out;
+}
+a:focus{
+    color: #8b27ef;
+    font-size: large;
+}

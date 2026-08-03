@@ -1,0 +1,89 @@
+.home {
+    padding: 0.5in 1in 0.5in 1in;
+    height:100dvh;
+}
+
+.nameGradient {
+    background: linear-gradient(90deg,
+            #5D86F7 0%,
+            #58B4F8 55%,
+            #4ED8F7 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.letter {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.nameTag {
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif, ;
+    font-weight: 500;
+    font-size: 80px;
+}
+
+.devGradient {
+    background: linear-gradient(90deg,
+            #c9cfe0 0%,
+            #87c0ec 55%,
+            #4ED8F7 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.dis {
+    font-size: larger;
+    color: aliceblue;
+}
+
+.flowing-bg {
+    position: relative;
+    padding: 10px 20px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+}
+
+.flowing-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    border-radius: 12px; 
+    padding: 1.3px; /* This controls your border thickness */
+    background: linear-gradient(to right, #c9cfe0, #87c0ec, #4ED8F7 ); 
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.flowing-bg:hover::before {
+    background: linear-gradient(-45deg, #ee52b2, #d835ca, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: flowAnimation 10s ease infinite;
+}
+.flowing-bg:hover {
+    background: linear-gradient(-45deg, #ee52b2, #d835ca, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: flowAnimation 10s ease infinite;
+}
+
+@keyframes flowAnimation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.logo{
+    width: 26px;
+}

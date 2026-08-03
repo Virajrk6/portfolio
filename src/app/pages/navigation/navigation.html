@@ -1,0 +1,42 @@
+<!-- <a  class="knobButton {{lable()}}">{{lable()}}</a> -->
+<!-- <a href="" class="knobButton {{lable()}}"> <img src="{{icon()}}" alt=""></a> -->
+
+<!-- <button class="menuButton" matFab (click)="isMenuOpen.set(!isMenuOpen())"><mat-icon></mat-icon></button>
+@if(isMenuOpen()){
+<div class="dial">
+    <div class="knob" [style.transform]="'rotate(' + rotation() + 'deg)'">
+        <div class="pointer"></div>
+    </div>
+</div>
+<div>
+    @for(item of logos(); track $index){
+        <button matIconButton class="knobButton {{item.place}}" [class.is-active]="isActive(item.place)" matTooltip="{{item.place}}" [matTooltipPosition]="'before'" (click)="goTo(item.index)">
+            <img src="{{item.src}}" alt="">
+        </button>
+    }
+</div>
+} -->
+<div class="nav-shell" cdkDrag >
+    <button class="menuButton d-flex" mat-fab cdkDragHandle aria-label="Open navigation"
+        (click)="toggle()" matTooltip="Navigation">
+        <mat-icon>{{getMenuIcon()}}</mat-icon>
+    </button>
+
+    @if (isMenuOpen()) {
+    <div class="dial">
+        <div class="knob" [style.transform]="'rotate(' + rotation() + 'deg)'">
+            <div class="pointer "></div>
+        </div>
+
+        <div class="knobButtonDiv">
+            @for (item of logos(); track item.index) {
+            <button matIconButton class="knobButton {{ item.place }}" [class.is-active]="isActive(item.place)"
+                [matTooltip]="item.place"  (click)="goTo(item.index)"
+                [style.transform]="'rotate('  + (-90 +  item.index * 60) + 'deg) translateX(80px) rotate(' + (90-item.index * 60) + 'deg)'">
+                <img [src]="item.src" [alt]="item.place" />
+            </button>
+            }
+        </div>
+    </div>
+    }
+</div>

@@ -1,0 +1,11 @@
+<!-- @if (activeSectionIndex() < 2) { -->
+  <app-star-background></app-star-background>
+<!-- } -->
+<!-- <button (click)="goTo(3)">Projects</button> -->
+<app-navigation [rotation]="rotation()" [lable]="lable()" [icon]="icon()" (goTobutton)="goTo($event)"></app-navigation>
+<section id="home" class="panel" [class.active]="activeSectionIndex() === 0"><app-home (goToPage)="goTo($event)" /></section>
+<section id="about" class="panel" [class.active]="activeSectionIndex() === 1"><app-about /></section>
+<section id="skills" class="panel" [class.active]="activeSectionIndex() === 2"><app-skills /></section>
+<section id="projects" class="panel" [class.active]="activeSectionIndex() === 3"><app-projects /></section>
+<section id="research" class="panel" [class.active]="activeSectionIndex() === 4"><app-research /></section>
+<section id="contact" class="panel" [class.active]="activeSectionIndex() === 5"><app-contact /></section>

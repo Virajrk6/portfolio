@@ -1,0 +1,303 @@
+/* .dial {
+   position: fixed;
+   width: 330px;
+   height: 420px;
+   z-index: 10;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(30, 42, 70, 0.5);
+   backdrop-filter: blur(2px);
+   transform-origin: bottom right;
+   animation: fanOpen 0.5s ease-out;
+}
+
+.knob {
+   position: fixed;
+   width: 240px;
+   height: 240px;
+   border-radius: 50%;
+   background-color: rgba(30, 42, 70, 0.3);
+   backdrop-filter: blur(10px);
+   position: relative;
+   transition: transform 0.4s ease;
+
+}
+
+
+@keyframes fanOpen {
+
+   from {
+      transform: rotate(20deg) scale(0.2);
+      opacity: 0;
+   }
+
+   to {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+   }
+}
+
+.pointer {
+   width: 4px;
+   height: 50px;
+   background: #4DD9FF;
+   position: absolute;
+   left: 50%;
+   top: 10px;
+   z-index: 10;
+   box-shadow: 0 0 10px #4DD9FF;
+}
+
+
+.menuButton {
+  width: 200px;
+  height: 200px;
+  border: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: move;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+  font-family: sans-serif;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow:
+    0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.example-box:active {
+  box-shadow:
+    0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.knobButton {
+   position: fixed;
+   transition: 0.2s;
+   z-index: 11;
+   width: 36px;
+   height: 36px;
+   animation: fanReveal 0.45s ease-out forwards;
+}
+
+@keyframes fanReveal {
+
+   0% {
+      opacity: 0;
+      transform: scale(0) rotate(-90deg);
+   }
+
+   60% {
+      opacity: 1;
+      transform: scale(1.1) rotate(5deg);
+   }
+
+   100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+   }
+}
+
+.knobButton.is-active {
+   position: fixed;
+   transition: 0.2s;
+   width: 42px;
+   height: 42px;
+   z-index: 12;
+   filter: drop-shadow(0 0 6px rgb(65, 162, 184));
+   transform: scale(1.15);
+
+}
+
+.mat-mdc-icon-button img {
+   width: 22px;
+   height: 22px;
+}
+
+.mat-mdc-icon-button.is-active img {
+   width: 30px;
+   height: 30px;
+}
+/* 
+.Home {
+   right: 2px;
+   bottom: 150px;
+   animation-delay: 0.05s;
+}
+
+.About {
+   right: 40px;
+   bottom: 136px;
+   animation-delay: 0.10s;
+}
+
+.Skills {
+   right: 70px;
+   bottom: 110px;
+   animation-delay: 0.15s;
+}
+
+.Projects {
+   right: 94px;
+   bottom: 80px;
+   animation-delay: 0.20s;
+}
+
+.Research {
+   right: 110px;
+   bottom: 42px;
+   animation-delay: 0.25s;
+}
+
+.Contact {
+   right: 116px;
+   bottom: 0;
+   animation-delay: 0.30s;
+}
+
+.knobButton:hover {
+   transform: scale(1.2);
+   transition: 0.2s;
+} */
+
+.nav-shell {
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+   width: 100px;
+   height: 100px;
+   z-index: 30;
+   cursor: grab;
+   touch-action: none;
+   /* border: 1px solid rgba(127, 176, 255, 0.35); */
+
+}
+
+.nav-shell:active {
+   cursor: grabbing;
+}
+
+.menuButton {
+   /* top: 145%;
+   left: 145%; */
+   z-index: 40;
+   border-radius: 50%;
+
+}
+
+.dial {
+   position: absolute;
+   width: 200px;
+   height: 200px;
+   left: -74%;
+   top: -74%;
+   /* transform: translate(-50%, -50%); */
+   border-radius: 50%;
+   border-radius: 50%;
+   display: block;
+   background: rgba(17, 24, 39, 0.45);
+   /* border: 1px solid rgba(127, 176, 255, 0.35); */
+   backdrop-filter: blur(10px);
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+   z-index: 20;
+   animation: fanOpen 0.45s ease-out;
+}
+
+.knob {
+   position: fixed;
+
+   width: 110px;
+   height: 110px;
+
+   left: 23%;
+   top: 23%;
+
+   /* transform: translate(-50%, -50%); */
+
+   border-radius: 50%;
+   border-radius: 50%;
+   background: rgba(39, 54, 81, 0.45);
+   /* border: 1px solid rgba(146, 196, 255, 0.2); */
+   transition: transform 0.35s ease;
+}
+
+.pointer {
+   position: absolute;
+   width: 4px;
+   height: 22px;
+   left: 50%;
+   top: 2px;
+   transform: translateX(-50%);
+   background: #4dd9ff;
+   box-shadow: 0 0 12px rgba(77, 217, 255, 0.9);
+   border-radius: 2px;
+}
+
+.knobButton {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   left: 40%;
+   top: 42%;
+
+   transform-origin: center center;
+   filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0));
+   /* background: rgba(17, 24, 39, 0.9); */
+   /* border: 1px solid rgba(125, 201, 255, 0.35); */
+   /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); */
+   z-index: 25;
+   transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.knobButton:hover {
+   transform: scale(1.08);
+}
+
+.knobButton.is-active {
+   filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.8));
+}
+
+.knobButton.is-active img {
+   width: 32px;
+   height: 32px;
+}
+
+.knobButton img {
+   width: 25px;
+   height: 25px;
+   transition:
+      width 0.3s ease,
+      height 0.3s ease,
+      transform 0.3s ease,
+      filter 0.3s ease;
+}
+
+
+@keyframes fanOpen {
+   from {
+      opacity: 0;
+      transform: scale(0.7) rotate(-60deg);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+   }
+}
+
+.menuButton {
+   background-color: rgba(146, 196, 255, 0.3);
+   color:aliceblue;
+}
