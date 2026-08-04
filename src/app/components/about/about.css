@@ -6,6 +6,15 @@
     /* background-color: aliceblue; */
 }
 
+@media (width <=480px) {
+    .about {
+        padding: 0.3in;
+    }
+    body{
+        font-size: smaller;
+    }
+}
+
 .dot {
     background-color: #3182ff;
     display: inline-block;
@@ -21,6 +30,7 @@
     font-weight: 600;
 
 }
+
 /* .Maincontent{
     height: 100%;
 } */
@@ -119,7 +129,8 @@
         font-weight: 600;
         color: #f8fafc;
     }
-    button{
+
+    button {
         display: flex;
         align-items: flex-start;
     }
@@ -166,7 +177,7 @@
     animation: leftToRight 0.5s linear;
 }
 
-.lightColor{
+.lightColor {
     color: #94a3b8;
 }
 

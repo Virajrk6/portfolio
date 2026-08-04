@@ -1,9 +1,17 @@
-:host .research {
+.research {
     /* height: 100dvh; */
     /* width: 100% !important; */
     padding: 1in 1in 0.5in 1in;
     /* background-color: #070a11; */
     color: #ffffff;
+}
+@media (width <=480px) {
+    .research {
+        padding: 0.3in;
+    }
+    body{
+        font-size: small;
+    }
 }
 
 .Gradient {

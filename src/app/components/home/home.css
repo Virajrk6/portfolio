@@ -2,6 +2,20 @@
     padding: 0.5in 1in 0.5in 1in;
     height:100dvh;
 }
+@media (width <= 480px) {
+    .home{
+        padding: 0.3in;
+    }
+    body{
+        font-size: small;
+    }
+    .nameTag span{
+        font-size: xxx-large;
+    }
+    h4{
+        font-size: x-large;
+    }
+}
 
 .nameGradient {
     background: linear-gradient(90deg,

@@ -7,18 +7,14 @@
     /* background-color: #070a11; */
     color: #ffffff;
 }
-/* 
-.leftContent {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    height: 90dvh;
-} */
-
-/* .top {
-    height: 40%;
-    padding-bottom: 20px;
-} */
+@media (width <=480px) {
+    .contact {
+        padding: 0.3in;
+    }
+    body{
+        font-size: smaller;
+    }
+}
 
 .heading {
     margin: 0px 12px;
