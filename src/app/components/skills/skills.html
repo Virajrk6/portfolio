@@ -41,8 +41,8 @@
         }
     </div>
 
-    <div class="coreStrength row">
-        <div class="d-flex flex-column px-2 col-sm-12 col-md-3 col-lg-2 col-xl-2  justify-content-center align-items-center">
+    <div class="coreStrength row justify-content-center align-items-center ">
+        <div class="d-flex flex-column px-2 col-sm-12 col-md-3 col-lg-2 col-xl-2 col-xxl-2  justify-content-center align-items-center">
             <div class="strengthLogo ">
                 <img src="{{strength().logo}}" alt="">
             </div>
@@ -54,9 +54,9 @@
                 </div> -->
         </div>
         <!-- <div class="verticleLine"></div> -->
-        <div class="strength d-flex mt-3 row justify-content-around px-3 col-sm-12 col-md-9 col-lg-10 col-xl-10">
+        <div class="strength d-flex mt-3 row justify-content-around px-3 col-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 col-xxl-10">
             @for(item of strength().softSkills; track $index){
-            <div class="d-flex flex-column align-items-center py-2 px-0 col-xl-2 col-lg-2 col-md-4 col-sm-6">
+            <div class="d-flex flex-column align-items-center py-2 px-2 col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
                 <div class="strengthsmallLogo">
                     <img src="{{item.skillLogo}}" alt="">
                 </div>

@@ -147,9 +147,10 @@
     align-items: center; */
     /* justify-content: center; */
     /* width: 105%; */
-    margin-left: -40px;
-    margin-right: -40px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
+
 /* .strengthDiv{
     width: 20%;
     display: flex;

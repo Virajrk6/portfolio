@@ -4,7 +4,7 @@
 }
 @media (width <= 480px) {
     .home{
-        padding: 0.3in;
+        padding: 1.5in 0.3in 1.5in 0.3in;
     }
     body{
         font-size: small;
