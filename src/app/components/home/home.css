@@ -1,5 +1,5 @@
 .home {
-    padding: 2in 1in 0.5in 1in;
+    padding: 1in 1in 0.5in 1in;
     height:100%;
 }
 @media (width <= 480px) {

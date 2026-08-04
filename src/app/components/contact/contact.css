@@ -3,7 +3,7 @@
     flex-direction: row;
     gap: 20px; */
     height: 100%;
-    padding: 1in 1in 1in 1in;
+    padding: 1in 1in 0.5in 1in;
     /* background-color: #070a11; */
     color: #ffffff;
 }
